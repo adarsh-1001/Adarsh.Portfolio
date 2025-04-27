@@ -29,6 +29,18 @@
 --popover: 0 0% 100%;
 --popover-foreground: 20 14.3% 4.1%;
 --card: 0 0% 100%;
+
+@keyframes scanner {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+@keyframes typing {
+  0% { width: 0; }
+  50% { width: 100%; }
+  100% { width: 0; }
+}
+
 --card-foreground: 20 14.3% 4.1%;
 --border: 20 5.9% 90%;
 --input: 20 5.9% 90%;

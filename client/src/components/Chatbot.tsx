@@ -153,19 +153,19 @@ const Chatbot = () => {
                 <div className="flex items-center space-x-2">
                   <div className="relative">
                     {/* Robot face */}
-                    <div className={`w-10 h-10 rounded-full bg-white flex items-center justify-center ${isBlushing ? 'bg-pink-100' : ''}`}>
+                    <div className={`w-10 h-10 bg-gradient-to-b from-slate-700 to-slate-800 flex items-center justify-center border-2 border-blue-400 ${isBlushing ? 'border-pink-400' : ''} transform rotate-3`}>
                       <div className="relative">
                         {/* Robot head */}
-                        <div className="w-8 h-7 bg-gradient-to-b from-gray-300 to-gray-200 rounded-t-lg flex items-center justify-center shadow-inner">
+                        <div className="w-8 h-7 bg-gradient-to-b from-slate-600 to-slate-700 flex items-center justify-center shadow-inner border-t-2 border-blue-300">
                           {/* Robot eyes */}
                           <div className="flex space-x-2 mt-0.5">
                             <div className="relative">
                               {/* Left eye outer casing */}
-                              <div className="w-2.5 h-2.5 rounded-full bg-blue-600 relative overflow-hidden">
-                                {/* Left eye inner "screen" */}
-                                <div className="absolute inset-0.5 rounded-full bg-blue-300"></div>
-                                {/* Left eye pupil */}
-                                <div className={`absolute w-1 h-1 rounded-full bg-blue-900 top-0.5 ${isVibrating ? 'animate-pulse' : ''} ${isBlushing ? 'left-1' : 'left-0.5'}`}></div>
+                              <div className="w-2.5 h-2.5 bg-black relative overflow-hidden border border-blue-400">
+                                {/* Left eye LED effect */}
+                                <div className="absolute inset-0.5 bg-blue-500 animate-pulse opacity-80"></div>
+                                {/* Left eye scanner */}
+                                <div className={`absolute w-0.5 h-full bg-blue-200 ${isVibrating ? 'animate-[scanner_1s_linear_infinite]' : ''} left-0`}></div>
                               </div>
                             </div>
                             <div className="relative">
@@ -190,8 +190,10 @@ const Chatbot = () => {
                           </>
                         )}
                         
-                        {/* Robot mouth - more dynamic */}
-                        <div className={`w-4 h-1 ${isTyping ? 'bg-blue-500 animate-pulse' : 'bg-gray-500'} rounded-full mx-auto mt-1.5`}></div>
+                        {/* Robot mouth - LED scanner */}
+                        <div className={`w-4 h-1 bg-black border border-blue-400 mx-auto mt-1.5 overflow-hidden`}>
+                          <div className={`h-full bg-blue-500 ${isTyping ? 'animate-[typing_1s_steps(4,end)_infinite]' : 'w-full'} opacity-80`}></div>
+                        </div>
                         
                         {/* Robot antenna with light */}
                         <div className="absolute -top-2.5 left-1/2 transform -translate-x-1/2 flex flex-col items-center">

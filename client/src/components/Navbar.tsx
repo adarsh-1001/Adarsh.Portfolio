@@ -36,14 +36,14 @@ const Navbar = () => {
     const baseClasses = mobile 
       ? "block py-3 text-xl hover:text-primary transition-colors" 
       : "hover:text-primary transition-colors";
-    
+
     // Additional highlight classes for the "Hire Me" link
     const highlightClasses = item.highlight 
       ? mobile 
         ? "font-bold text-pink-500 hover:text-pink-600"
         : "font-bold text-pink-500 hover:text-pink-600 relative after:content-[''] after:absolute after:w-full after:h-0.5 after:bg-pink-500 after:bottom-[-4px] after:left-0 after:scale-x-0 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
       : "";
-    
+
     // Combined classes
     const classes = `${baseClasses} ${highlightClasses}`;
 
