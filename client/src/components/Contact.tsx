@@ -121,7 +121,7 @@ const Contact = () => {
                         Email
                       </h4>
                       <a
-                        href="mailto:adarsh@example.com"
+                        href="mailto:mishraadarsh1001@gmail.com"
                         className="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors"
                       >
                         mishraadarsh1001@gmail.com
@@ -137,10 +137,10 @@ const Contact = () => {
                         Phone
                       </h4>
                       <a
-                        href="tel:+91 6307737501"
+                        href="tel:+916307737501"
                         className="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors"
                       >
-                        +91 (630) 7737-501
+                        +91 6307737501
                       </a>
                     </div>
                   </div>
