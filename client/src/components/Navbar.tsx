@@ -11,6 +11,7 @@ const navLinks = [
   { name: "Services", path: "#services", isHash: true },
   { name: "Testimonials", path: "#testimonials", isHash: true },
   { name: "Blog", path: "/blog", isHash: false },
+  { name: "Hire Me", path: "#hire-me", isHash: true, highlight: true },
   { name: "Contact", path: "#contact", isHash: true },
 ];
 
@@ -31,16 +32,28 @@ const Navbar = () => {
   const isHomePage = location === "/";
 
   const getNavLinkElement = (item: typeof navLinks[0], mobile = false) => {
+    // Base classes with conditional highlight styling
+    const baseClasses = mobile 
+      ? "block py-3 text-xl hover:text-primary transition-colors" 
+      : "hover:text-primary transition-colors";
+    
+    // Additional highlight classes for the "Hire Me" link
+    const highlightClasses = item.highlight 
+      ? mobile 
+        ? "font-bold text-pink-500 hover:text-pink-600"
+        : "font-bold text-pink-500 hover:text-pink-600 relative after:content-[''] after:absolute after:w-full after:h-0.5 after:bg-pink-500 after:bottom-[-4px] after:left-0 after:scale-x-0 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+      : "";
+    
+    // Combined classes
+    const classes = `${baseClasses} ${highlightClasses}`;
+
     if (item.isHash && !isHomePage) {
       // If it's a hash link but we're not on the home page, link to home + hash
       return (
         <Link 
           href={`/${item.path}`} 
           onClick={() => mobile && setOpen(false)}
-          className={mobile ? 
-            "block py-3 text-xl hover:text-primary transition-colors" : 
-            "hover:text-primary transition-colors"
-          }
+          className={classes}
         >
           {item.name}
         </Link>
@@ -51,10 +64,7 @@ const Navbar = () => {
         <a 
           href={item.path} 
           onClick={() => mobile && setOpen(false)}
-          className={mobile ? 
-            "block py-3 text-xl hover:text-primary transition-colors" : 
-            "hover:text-primary transition-colors"
-          }
+          className={classes}
         >
           {item.name}
         </a>
@@ -65,10 +75,7 @@ const Navbar = () => {
         <Link 
           href={item.path} 
           onClick={() => mobile && setOpen(false)}
-          className={mobile ? 
-            "block py-3 text-xl hover:text-primary transition-colors" : 
-            "hover:text-primary transition-colors"
-          }
+          className={classes}
         >
           {item.name}
         </Link>
