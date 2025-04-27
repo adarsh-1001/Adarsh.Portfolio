@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { Github, Linkedin, Twitter, Dribbble } from "lucide-react";
 
-import profileImage from "@/assets/profile.jpg";
+import profileImage from "@/assets/adarsh-profile.svg";
 
 const Hero = () => {
   return (
