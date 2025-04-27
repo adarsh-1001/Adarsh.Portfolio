@@ -25,12 +25,12 @@ const projects = [
   },
   {
     id: 2,
-    title: "Health & Fitness App",
-    category: "Mobile App",
+    title: "Skin Disease Prediction System",
+    category: "AI/ML",
     categoryColor: "bg-green-100 text-secondary",
-    description: "Mobile app for tracking workouts, nutrition, and health metrics with personalized recommendations.",
+    description: "AI-powered system that analyzes skin images to detect and classify various skin conditions using deep learning.",
     image: project2Image,
-    technologies: ["React Native", "Firebase", "GraphQL", "TensorFlow"],
+    technologies: ["Python", "TensorFlow", "OpenCV", "Flask"],
     liveLink: "#",
     codeLink: "#"
   },
