@@ -4,7 +4,7 @@ import { Link } from "wouter";
 import { Github, Linkedin, Twitter, Dribbble } from "lucide-react";
 
 // Import your image
-import profileImage from "@/assets/adarsh-profile.svg";
+import profileImage from "@/assets/profile-image.jpg";
 import backgroundImage from "@/assets/background.svg";
 
 const Hero = () => {
@@ -81,7 +81,7 @@ const Hero = () => {
               <img
                 src={profileImage}
                 alt="Adarsh Mishra"
-                className="relative z-10 rounded-full border-4 border-white dark:border-gray-800 w-72 h-72 object-cover"
+                className="relative z-10 rounded-full border-4 border-white dark:border-gray-800 w-72 h-72 object-cover shadow-xl"
               />
             </div>
           </motion.div>
