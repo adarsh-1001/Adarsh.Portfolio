@@ -20,7 +20,7 @@ const Hero = () => {
               <span className="text-primary font-medium">Hello, I'm</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Adarsh <span className="text-primary">Portfolio</span>
+              Adarsh <span className="text-primary">Mishra</span>
             </h1>
             <h2 className="text-2xl md:text-3xl font-medium text-gray-600 dark:text-gray-300 mb-6">
               Full Stack Developer & UI/UX Designer

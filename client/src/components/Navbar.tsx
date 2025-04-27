@@ -5,7 +5,6 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { name: "Home", path: "#home", isHash: true },
   { name: "Skills", path: "#skills", isHash: true },
   { name: "Projects", path: "#projects", isHash: true },
   { name: "Services", path: "#services", isHash: true },

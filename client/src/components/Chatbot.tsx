@@ -129,7 +129,7 @@ const Chatbot = () => {
       >
         <Button
           onClick={() => setIsOpen(!isOpen)}
-          className={`rounded-full w-14 h-14 p-0 flex items-center justify-center bg-gradient-to-r from-blue-600 to-pink-600 shadow-lg hover:shadow-xl transition-all duration-300 ${
+          className={`rounded-lg w-14 h-14 p-0 flex items-center justify-center bg-gradient-to-r from-slate-800 to-slate-900 border-2 border-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.5)] hover:shadow-[0_0_25px_rgba(59,130,246,0.8)] transition-all duration-300 ${
             isVibrating ? "animate-shake" : ""
           }`}
         >
@@ -149,7 +149,7 @@ const Chatbot = () => {
           >
             <Card className="border shadow-xl rounded-2xl overflow-hidden bg-white dark:bg-gray-900">
               {/* Chat header */}
-              <div className="bg-gradient-to-r from-blue-600 to-pink-600 p-4 text-white flex items-center justify-between">
+              <div className="bg-gradient-to-r from-slate-800 to-slate-900 p-4 text-white flex items-center justify-between border-b-2 border-blue-500">
                 <div className="flex items-center space-x-2">
                   <div className="relative">
                     {/* Robot face */}
