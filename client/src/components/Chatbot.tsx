@@ -145,24 +145,52 @@ const Chatbot = () => {
                     <div className={`w-10 h-10 rounded-full bg-white flex items-center justify-center ${isBlushing ? 'bg-pink-100' : ''}`}>
                       <div className="relative">
                         {/* Robot head */}
-                        <div className="w-8 h-7 bg-gray-200 rounded-t-lg flex items-center justify-center">
+                        <div className="w-8 h-7 bg-gradient-to-b from-gray-300 to-gray-200 rounded-t-lg flex items-center justify-center shadow-inner">
                           {/* Robot eyes */}
-                          <div className="flex space-x-2 mt-1">
-                            <div className={`w-2 h-2 rounded-full bg-blue-500 ${isBlushing ? 'animate-pulse' : ''}`}></div>
-                            <div className={`w-2 h-2 rounded-full bg-blue-500 ${isBlushing ? 'animate-pulse' : ''}`}></div>
+                          <div className="flex space-x-2 mt-0.5">
+                            <div className="relative">
+                              {/* Left eye outer casing */}
+                              <div className="w-2.5 h-2.5 rounded-full bg-blue-600 relative overflow-hidden">
+                                {/* Left eye inner "screen" */}
+                                <div className="absolute inset-0.5 rounded-full bg-blue-300"></div>
+                                {/* Left eye pupil */}
+                                <div className={`absolute w-1 h-1 rounded-full bg-blue-900 top-0.5 ${isVibrating ? 'animate-pulse' : ''} ${isBlushing ? 'left-1' : 'left-0.5'}`}></div>
+                              </div>
+                            </div>
+                            <div className="relative">
+                              {/* Right eye outer casing */}
+                              <div className="w-2.5 h-2.5 rounded-full bg-blue-600 relative overflow-hidden">
+                                {/* Right eye inner "screen" */}
+                                <div className="absolute inset-0.5 rounded-full bg-blue-300"></div>
+                                {/* Right eye pupil */}
+                                <div className={`absolute w-1 h-1 rounded-full bg-blue-900 top-0.5 ${isVibrating ? 'animate-pulse' : ''} ${isBlushing ? 'left-0' : 'left-0.5'}`}></div>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                        {/* Robot blush */}
+                        
+                        {/* Robot blush effect - enhanced */}
                         {isBlushing && (
                           <>
-                            <div className="absolute w-2 h-1 bg-pink-300 rounded-full left-0.5 top-4"></div>
-                            <div className="absolute w-2 h-1 bg-pink-300 rounded-full right-0.5 top-4"></div>
+                            <div className="absolute w-2.5 h-1.5 bg-pink-400 rounded-full left-0 top-4 opacity-70"></div>
+                            <div className="absolute w-2.5 h-1.5 bg-pink-400 rounded-full right-0 top-4 opacity-70"></div>
+                            <div className="absolute w-1.5 h-1 bg-pink-300 rounded-full left-0.5 top-[1.125rem] animate-pulse"></div>
+                            <div className="absolute w-1.5 h-1 bg-pink-300 rounded-full right-0.5 top-[1.125rem] animate-pulse"></div>
                           </>
                         )}
-                        {/* Robot mouth */}
-                        <div className="w-4 h-1 bg-gray-400 rounded-full mx-auto mt-1"></div>
-                        {/* Robot antenna */}
-                        <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-1 h-2 bg-gray-400"></div>
+                        
+                        {/* Robot mouth - more dynamic */}
+                        <div className={`w-4 h-1 ${isTyping ? 'bg-blue-500 animate-pulse' : 'bg-gray-500'} rounded-full mx-auto mt-1.5`}></div>
+                        
+                        {/* Robot antenna with light */}
+                        <div className="absolute -top-2.5 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
+                          <div className={`w-1.5 h-1.5 rounded-full ${isVibrating ? 'bg-pink-500 animate-pulse' : 'bg-blue-500'}`}></div>
+                          <div className="w-1 h-2 bg-gray-400"></div>
+                        </div>
+                        
+                        {/* Circuit patterns on head */}
+                        <div className="absolute w-1 h-3 border-r border-gray-400 left-1 top-1"></div>
+                        <div className="absolute w-1 h-3 border-l border-gray-400 right-1 top-1"></div>
                       </div>
                     </div>
                   </div>

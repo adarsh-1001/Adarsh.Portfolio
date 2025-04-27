@@ -128,7 +128,7 @@ const HireMe = () => {
                         rel="noopener noreferrer"
                         className="text-white hover:text-pink-300 transition-colors"
                       >
-                        adarsh-mishra-7july2003
+                        Mishra (7july2003)
                       </a>
                     </div>
                   </div>
