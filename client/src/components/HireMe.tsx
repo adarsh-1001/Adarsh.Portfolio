@@ -37,7 +37,7 @@ const HireMe = () => {
             transition={{ duration: 0.5 }}
             className="text-3xl md:text-4xl font-bold mb-4 text-white"
           >
-            Ready to <span className="text-pink-500">Hire Mishra</span>?
+            Ready to <span className="text-pink-500">Work Together</span>?
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
