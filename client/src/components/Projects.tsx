@@ -4,12 +4,12 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
-const project1Image = "https://source.unsplash.com/random/800x600/?tech,webapp";
-const project2Image = "https://source.unsplash.com/random/800x600/?mobile,app";
-const project3Image = "https://source.unsplash.com/random/800x600/?dashboard";
-const project4Image = "https://source.unsplash.com/random/800x600/?ai";
-const project5Image = "https://source.unsplash.com/random/800x600/?education";
-const project6Image = "https://source.unsplash.com/random/800x600/?business";
+import project1Image from "@/assets/project1.svg";
+import project2Image from "@/assets/project2.svg";
+import project3Image from "@/assets/project3.svg";
+import project4Image from "@/assets/project4.svg";
+import project5Image from "@/assets/project5.svg";
+import project6Image from "@/assets/project6.svg";
 
 const projects = [
   {

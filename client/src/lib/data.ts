@@ -26,7 +26,7 @@ export const blogPosts: BlogPost[] = [
     date: "October 15, 2023",
     readTime: 5,
     excerpt: "Learn the best practices for React development that will help you build better, more efficient, and maintainable applications.",
-    coverImage: "https://source.unsplash.com/random/800x600/?coding",
+    coverImage: project1Image,
     content: `
       <h2>Introduction</h2>
       <p>React has become one of the most popular JavaScript libraries for building user interfaces. With its component-based architecture and virtual DOM, React makes it easier to create interactive UIs that update efficiently when your data changes.</p>
@@ -111,7 +111,7 @@ export const blogPosts: BlogPost[] = [
     date: "October 2, 2023",
     readTime: 7,
     excerpt: "Discover the key UX design principles that will help you create intuitive, engaging, and user-friendly digital products.",
-    coverImage: "https://source.unsplash.com/random/800x600/?design",
+    coverImage: project2Image,
     content: `
       <h2>Introduction to UX Design</h2>
       <p>User Experience (UX) design is the process of creating products that provide meaningful and relevant experiences to users. This involves the design of the entire process of acquiring and integrating the product, including aspects of branding, design, usability, and function.</p>
@@ -170,7 +170,7 @@ export const blogPosts: BlogPost[] = [
     date: "September 18, 2023",
     readTime: 9,
     excerpt: "Learn how to design and implement a scalable microservices architecture using Node.js and related technologies.",
-    coverImage: "https://source.unsplash.com/random/800x600/?server",
+    coverImage: project3Image,
     content: `
       <h2>Introduction to Microservices</h2>
       <p>Microservices architecture is an approach to application development where a large application is built as a suite of small, independent services. Each service runs in its own process, communicates with lightweight mechanisms (often HTTP/REST APIs), and is independently deployable.</p>
