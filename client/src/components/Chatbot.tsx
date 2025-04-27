@@ -174,7 +174,7 @@ const Chatbot = () => {
                                 {/* Right eye inner "screen" */}
                                 <div className="absolute inset-0.5 rounded-full bg-blue-300"></div>
                                 {/* Right eye pupil */}
-                                <div className={`absolute w-1 h-1 rounded-full bg-blue-900 top-0.5 ${isVibrating ? 'animate-pulse' : ''} ${isBlushing ? 'left-0' : 'left-0.5}`}></div>
+                                <div className={`absolute w-1 h-1 rounded-full bg-blue-900 top-0.5 ${isVibrating ? 'animate-pulse' : ''} ${isBlushing ? 'left-0' : 'left-0.5'}`}></div>
                               </div>
                             </div>
                           </div>
