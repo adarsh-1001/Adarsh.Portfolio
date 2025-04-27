@@ -69,24 +69,24 @@ const Chatbot = () => {
       isUser: true,
       timestamp: new Date(),
     };
-    
+
     setMessages((prev) => [...prev, userMessage]);
     setInputValue("");
-    
+
     // Trigger vibration
     setIsVibrating(true);
     setTimeout(() => setIsVibrating(false), 500);
 
     // Bot is typing...
     setIsTyping(true);
-    
+
     // Simulate AI response after delay
     setTimeout(() => {
       // AI responses based on input (simplified for demo)
       let botResponse = "I'm sorry, I don't have an answer for that right now.";
-      
+
       const input = inputValue.toLowerCase();
-      
+
       if (input.includes("hello") || input.includes("hi")) {
         botResponse = "Hello there! How can I assist you today?";
       } else if (input.includes("help")) {
@@ -104,14 +104,14 @@ const Chatbot = () => {
         setIsBlushing(true);
         setTimeout(() => setIsBlushing(false), 3000);
       }
-      
+
       const botMessage: Message = {
         id: generateId(),
         text: botResponse,
         isUser: false,
         timestamp: new Date(),
       };
-      
+
       setMessages((prev) => [...prev, botMessage]);
       setIsTyping(false);
     }, 1500);
@@ -145,7 +145,7 @@ const Chatbot = () => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="fixed bottom-20 right-5 z-50 w-80 md:w-96"
+            className={`fixed bottom-20 right-5 z-50 w-80 md:w-96 animate-[robot-hover_4s_ease-in-out_infinite]`}
           >
             <Card className="border shadow-xl rounded-2xl overflow-hidden bg-white dark:bg-gray-900">
               {/* Chat header */}
@@ -153,10 +153,10 @@ const Chatbot = () => {
                 <div className="flex items-center space-x-2">
                   <div className="relative">
                     {/* Robot face */}
-                    <div className={`w-10 h-10 bg-gradient-to-b from-slate-700 to-slate-800 flex items-center justify-center border-2 border-blue-400 ${isBlushing ? 'border-pink-400' : ''} transform rotate-3`}>
+                    <div className={`w-12 h-14 bg-gradient-to-b from-slate-800 to-slate-900 flex items-center justify-center border-2 ${isBlushing ? 'border-pink-400' : 'border-blue-400'} rounded-tr-2xl rounded-bl-2xl transform hover:rotate-3 transition-transform duration-300`}>
                       <div className="relative">
-                        {/* Robot head */}
-                        <div className="w-8 h-7 bg-gradient-to-b from-slate-600 to-slate-700 flex items-center justify-center shadow-inner border-t-2 border-blue-300">
+                        {/* Robot head with angular design */}
+                        <div className="w-10 h-8 bg-gradient-to-b from-slate-700 to-slate-800 flex items-center justify-center shadow-inner border-2 border-blue-400 clip-path-robot">
                           {/* Robot eyes */}
                           <div className="flex space-x-2 mt-0.5">
                             <div className="relative">
@@ -174,12 +174,12 @@ const Chatbot = () => {
                                 {/* Right eye inner "screen" */}
                                 <div className="absolute inset-0.5 rounded-full bg-blue-300"></div>
                                 {/* Right eye pupil */}
-                                <div className={`absolute w-1 h-1 rounded-full bg-blue-900 top-0.5 ${isVibrating ? 'animate-pulse' : ''} ${isBlushing ? 'left-0' : 'left-0.5'}`}></div>
+                                <div className={`absolute w-1 h-1 rounded-full bg-blue-900 top-0.5 ${isVibrating ? 'animate-pulse' : ''} ${isBlushing ? 'left-0' : 'left-0.5}`}></div>
                               </div>
                             </div>
                           </div>
                         </div>
-                        
+
                         {/* Robot blush effect - enhanced */}
                         {isBlushing && (
                           <>
@@ -189,18 +189,18 @@ const Chatbot = () => {
                             <div className="absolute w-1.5 h-1 bg-pink-300 rounded-full right-0.5 top-[1.125rem] animate-pulse"></div>
                           </>
                         )}
-                        
+
                         {/* Robot mouth - LED scanner */}
                         <div className={`w-4 h-1 bg-black border border-blue-400 mx-auto mt-1.5 overflow-hidden`}>
                           <div className={`h-full bg-blue-500 ${isTyping ? 'animate-[typing_1s_steps(4,end)_infinite]' : 'w-full'} opacity-80`}></div>
                         </div>
-                        
+
                         {/* Robot antenna with light */}
                         <div className="absolute -top-2.5 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
-                          <div className={`w-1.5 h-1.5 rounded-full ${isVibrating ? 'bg-pink-500 animate-pulse' : 'bg-blue-500'}`}></div>
+                          <div className={`w-1.5 h-1.5 rounded-full ${isVibrating ? 'bg-pink-500 animate-pulse' : 'bg-blue-500}`}></div>
                           <div className="w-1 h-2 bg-gray-400"></div>
                         </div>
-                        
+
                         {/* Circuit patterns on head */}
                         <div className="absolute w-1 h-3 border-r border-gray-400 left-1 top-1"></div>
                         <div className="absolute w-1 h-3 border-l border-gray-400 right-1 top-1"></div>
@@ -221,7 +221,7 @@ const Chatbot = () => {
                   <X size={18} />
                 </Button>
               </div>
-              
+
               {/* Chat messages */}
               <div className="h-80 overflow-y-auto p-4 flex flex-col space-y-3">
                 {messages.map((message) => (
@@ -248,7 +248,7 @@ const Chatbot = () => {
                     </div>
                   </div>
                 ))}
-                
+
                 {/* Typing indicator */}
                 {isTyping && (
                   <div className="flex justify-start">
@@ -261,10 +261,10 @@ const Chatbot = () => {
                     </div>
                   </div>
                 )}
-                
+
                 <div ref={messagesEndRef} />
               </div>
-              
+
               {/* Chat input */}
               <div className="border-t p-3">
                 <form onSubmit={handleSubmit} className="flex space-x-2">
@@ -285,7 +285,7 @@ const Chatbot = () => {
                     <Send size={18} />
                   </Button>
                 </form>
-                
+
                 {/* Quick suggestions */}
                 <div className="mt-2 flex flex-wrap gap-2">
                   <button
