@@ -3,7 +3,9 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { Github, Linkedin, Twitter, Dribbble } from "lucide-react";
 
+// Import your image
 import profileImage from "@/assets/adarsh-profile.svg";
+import backgroundImage from "@/assets/background.svg";
 
 const Hero = () => {
   return (
