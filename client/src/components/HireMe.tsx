@@ -17,7 +17,19 @@ const HireMe = () => {
       </div>
       
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-12">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-12 bg-gradient-to-r from-blue-950/60 to-blue-900/60 backdrop-blur-sm p-8 rounded-xl border-t border-b border-blue-700/30 shadow-xl max-w-4xl mx-auto"
+        >
+          <div className="absolute -top-6 left-1/2 transform -translate-x-1/2">
+            <div className="bg-pink-500 text-white font-bold py-2 px-6 rounded-full shadow-lg">
+              Hire Me
+            </div>
+          </div>
+          
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -25,7 +37,7 @@ const HireMe = () => {
             transition={{ duration: 0.5 }}
             className="text-3xl md:text-4xl font-bold mb-4 text-white"
           >
-            Ready to <span className="text-pink-500">Collaborate</span>?
+            Ready to <span className="text-pink-500">Hire Mishra</span>?
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -37,7 +49,9 @@ const HireMe = () => {
             Let's bring your ideas to life! I'm available for freelance projects, 
             full-time positions, and consulting opportunities.
           </motion.p>
-        </div>
+          
+          <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-1.5 bg-gradient-to-r from-pink-500 to-blue-500 rounded-full"></div>
+        </motion.div>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
           {/* Left column - Contact information card */}
@@ -97,7 +111,7 @@ const HireMe = () => {
                         rel="noopener noreferrer"
                         className="text-white hover:text-pink-300 transition-colors"
                       >
-                        adarsh-1001
+                        Mishra (adarsh-1001)
                       </a>
                     </div>
                   </div>
@@ -208,7 +222,7 @@ const HireMe = () => {
               <div className="bg-gradient-to-r from-blue-900/60 to-blue-800/60 backdrop-blur-sm p-6 rounded-xl
                 border-l-4 border-pink-500 shadow-lg transform hover:-translate-y-1 transition-transform duration-300">
                 <p className="text-blue-100 italic">
-                  "Adarsh is a highly skilled developer who consistently delivers exceptional results. 
+                  "Mishra is a highly skilled developer who consistently delivers exceptional results. 
                   His technical expertise and problem-solving abilities make him an invaluable asset to any project."
                 </p>
                 <div className="mt-4 flex items-center">

@@ -10,6 +10,7 @@ import BlogList from "@/pages/BlogList";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
+import Chatbot from "@/components/Chatbot";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
 function Router() {
@@ -35,6 +36,7 @@ function App() {
             <Footer />
           </ScrollArea>
           <BackToTop />
+          <Chatbot />
         </div>
       </TooltipProvider>
     </QueryClientProvider>
