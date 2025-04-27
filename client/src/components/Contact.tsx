@@ -1,6 +1,16 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Github, Instagram, Layers } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Github,
+  Instagram,
+  Layers,
+} from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -15,24 +25,31 @@ const Contact = () => {
     name: "",
     email: "",
     subject: "",
-    message: ""
+    message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Validate form
-    if (!formData.name || !formData.email || !formData.subject || !formData.message) {
+    if (
+      !formData.name ||
+      !formData.email ||
+      !formData.subject ||
+      !formData.message
+    ) {
       toast({
         title: "Missing Fields",
         description: "Please fill in all the fields",
-        variant: "destructive"
+        variant: "destructive",
       });
       return;
     }
@@ -43,7 +60,7 @@ const Contact = () => {
       toast({
         title: "Invalid Email",
         description: "Please enter a valid email address",
-        variant: "destructive"
+        variant: "destructive",
       });
       return;
     }
@@ -55,14 +72,15 @@ const Contact = () => {
       toast({
         title: "Message Sent",
         description: "Thank you for your message. I'll get back to you soon!",
-        variant: "default"
+        variant: "default",
       });
       setFormData({ name: "", email: "", subject: "", message: "" });
     } catch (error) {
       toast({
         title: "Error",
-        description: "There was an error sending your message. Please try again.",
-        variant: "destructive"
+        description:
+          "There was an error sending your message. Please try again.",
+        variant: "destructive",
       });
     } finally {
       setIsSubmitting(false);
@@ -77,7 +95,8 @@ const Contact = () => {
             Get In <span className="text-primary">Touch</span>
           </h2>
           <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Have a project in mind or want to discuss a potential collaboration? I'd love to hear from you!
+            Have a project in mind or want to discuss a potential collaboration?
+            I'd love to hear from you!
           </p>
         </div>
 
@@ -98,9 +117,14 @@ const Contact = () => {
                       <Mail className="w-5 h-5" />
                     </div>
                     <div>
-                      <h4 className="font-medium text-gray-900 dark:text-gray-100 mb-1">Email</h4>
-                      <a href="mailto:adarsh@example.com" className="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors">
-                        adarsh@example.com
+                      <h4 className="font-medium text-gray-900 dark:text-gray-100 mb-1">
+                        Email
+                      </h4>
+                      <a
+                        href="mailto:adarsh@example.com"
+                        className="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors"
+                      >
+                        mishraadarsh1001@gmail.com
                       </a>
                     </div>
                   </div>
@@ -109,9 +133,14 @@ const Contact = () => {
                       <Phone className="w-5 h-5" />
                     </div>
                     <div>
-                      <h4 className="font-medium text-gray-900 dark:text-gray-100 mb-1">Phone</h4>
-                      <a href="tel:+1234567890" className="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors">
-                        +1 (234) 567-890
+                      <h4 className="font-medium text-gray-900 dark:text-gray-100 mb-1">
+                        Phone
+                      </h4>
+                      <a
+                        href="tel:+91 6307737501"
+                        className="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors"
+                      >
+                        +91 (630) 7737-501
                       </a>
                     </div>
                   </div>
@@ -120,9 +149,11 @@ const Contact = () => {
                       <MapPin className="w-5 h-5" />
                     </div>
                     <div>
-                      <h4 className="font-medium text-gray-900 dark:text-gray-100 mb-1">Location</h4>
+                      <h4 className="font-medium text-gray-900 dark:text-gray-100 mb-1">
+                        Location
+                      </h4>
                       <p className="text-gray-600 dark:text-gray-300">
-                        San Francisco, CA, United States
+                        Prayagraj, Uttar Pradesh, India
                       </p>
                     </div>
                   </div>
@@ -233,8 +264,8 @@ const Contact = () => {
                       required
                     />
                   </div>
-                  <Button 
-                    type="submit" 
+                  <Button
+                    type="submit"
                     size="lg"
                     className="w-full"
                     disabled={isSubmitting}
@@ -242,7 +273,9 @@ const Contact = () => {
                     {isSubmitting ? (
                       <>Sending Message...</>
                     ) : (
-                      <>Send Message <Layers className="ml-2 w-4 h-4" /></>
+                      <>
+                        Send Message <Layers className="ml-2 w-4 h-4" />
+                      </>
                     )}
                   </Button>
                 </form>
