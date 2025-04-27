@@ -14,11 +14,21 @@ type Message = {
 const INITIAL_MESSAGES: Message[] = [
   {
     id: "welcome",
-    text: "Hello! I'm Mishra's AI assistant. How can I help you today?",
+    text: "Hello! I'm Adarsh Mishra's AI assistant. I'm here to help you learn more about his work and expertise! 🚀",
     isUser: false,
     timestamp: new Date(),
   },
 ];
+
+// Add continuous animation for the chatbot button
+const pulseAnimation = {
+  scale: [1, 1.1, 1],
+  transition: {
+    duration: 2,
+    repeat: Infinity,
+    ease: "easeInOut"
+  }
+};
 
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -112,8 +122,9 @@ const Chatbot = () => {
       {/* Floating chat button */}
       <motion.div
         initial={{ scale: 0.8, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ type: "spring", stiffness: 260, damping: 20 }}
+        animate={{ ...pulseAnimation, opacity: 1 }}
+        whileHover={{ scale: 1.2 }}
+        whileTap={{ scale: 0.9 }}
         className="fixed bottom-5 right-5 z-50"
       >
         <Button
