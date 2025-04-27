@@ -197,7 +197,7 @@ const Chatbot = () => {
 
                         {/* Robot antenna with light */}
                         <div className="absolute -top-2.5 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
-                          <div className={`w-1.5 h-1.5 rounded-full ${isVibrating ? 'bg-pink-500 animate-pulse' : 'bg-blue-500}`}></div>
+                          <div className={`w-1.5 h-1.5 rounded-full ${isVibrating ? 'bg-pink-500 animate-pulse' : 'bg-blue-500'}`}></div>
                           <div className="w-1 h-2 bg-gray-400"></div>
                         </div>
 
