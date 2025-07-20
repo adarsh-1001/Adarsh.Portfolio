@@ -1,16 +1,56 @@
-<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="600" fill="#E6F0FF"/>
-  <rect x="150" y="150" width="500" height="300" rx="10" fill="#FFFFFF"/>
-  <rect x="200" y="200" width="400" height="50" rx="5" fill="#DBEAFE"/>
-  <rect x="200" y="270" width="200" height="30" rx="5" fill="#DBEAFE"/>
-  <rect x="200" y="320" width="400" height="80" rx="5" fill="#DBEAFE"/>
-  <circle cx="700" cy="100" r="50" fill="#3B82F6" fill-opacity="0.2"/>
-  <circle cx="100" cy="500" r="50" fill="#3B82F6" fill-opacity="0.2"/>
-  <path d="M700 200L750 150H650L700 200Z" fill="#3B82F6"/>
-</svg>
-<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="600" fill="#2563EB"/>
-  <circle cx="400" cy="300" r="150" fill="#60A5FA"/>
-  <rect x="250" y="200" width="300" height="40" rx="20" fill="#93C5FD"/>
-  <rect x="250" y="260" width="300" height="40" rx="20" fill="#93C5FD"/>
+<svg width="400" height="240" viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#047857;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="240" fill="url(#grad5)"/>
+  
+  <!-- Browser window -->
+  <rect x="30" y="40" width="340" height="180" rx="8" fill="white" opacity="0.1" stroke="white" stroke-width="2"/>
+  <rect x="30" y="40" width="340" height="30" fill="white" opacity="0.2"/>
+  
+  <!-- Browser dots -->
+  <circle cx="50" cy="55" r="4" fill="#EF4444"/>
+  <circle cx="65" cy="55" r="4" fill="#F59E0B"/>
+  <circle cx="80" cy="55" r="4" fill="#10B981"/>
+  
+  <!-- Navigation -->
+  <rect x="50" y="90" width="60" height="20" rx="4" fill="white" opacity="0.8"/>
+  <rect x="120" y="90" width="60" height="20" rx="4" fill="white" opacity="0.6"/>
+  <rect x="190" y="90" width="60" height="20" rx="4" fill="white" opacity="0.6"/>
+  
+  <!-- Course content -->
+  <g transform="translate(60, 130)">
+    <!-- Video player -->
+    <rect x="0" y="0" width="120" height="70" rx="4" fill="white" opacity="0.2"/>
+    <polygon points="45,25 75,40 45,55" fill="white" opacity="0.8"/>
+  </g>
+  
+  <!-- Course list -->
+  <g transform="translate(200, 130)">
+    <rect x="0" y="0" width="150" height="12" rx="2" fill="white" opacity="0.7"/>
+    <rect x="0" y="18" width="120" height="12" rx="2" fill="white" opacity="0.5"/>
+    <rect x="0" y="36" width="140" height="12" rx="2" fill="white" opacity="0.6"/>
+    <rect x="0" y="54" width="100" height="12" rx="2" fill="white" opacity="0.4"/>
+  </g>
+  
+  <!-- Progress indicators -->
+  <circle cx="320" cy="140" r="8" fill="#10B981" opacity="0.8"/>
+  <text x="320" y="145" text-anchor="middle" fill="white" font-size="10" font-weight="bold">✓</text>
+  
+  <circle cx="320" cy="160" r="8" fill="#F59E0B" opacity="0.8"/>
+  <text x="320" y="165" text-anchor="middle" fill="white" font-size="10" font-weight="bold">●</text>
+  
+  <circle cx="320" cy="180" r="8" fill="white" opacity="0.3"/>
+  
+  <!-- Student avatar -->
+  <circle cx="90" cy="200" r="12" fill="white" opacity="0.8"/>
+  <circle cx="90" cy="195" r="4" fill="#047857"/>
+  <path d="M 82 205 Q 90 200 98 205" stroke="#047857" stroke-width="2" fill="none"/>
+  
+  <text x="20" y="30" fill="white" font-size="16" font-weight="bold">Educational Platform</text>
 </svg>
